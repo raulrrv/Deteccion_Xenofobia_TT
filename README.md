@@ -25,8 +25,7 @@ RegEx 2020.7.14
 Joblib 0.16.0
 Matplotlib 3.2.2
 Googletrans 3.0.0
-```
-```
+
 Spyder IDE
 Google Colab
 ```
