@@ -26,6 +26,10 @@ Joblib 0.16.0
 Matplotlib 3.2.2
 Googletrans 3.0.0
 ```
+```
+Spyder IDE
+Google Colab
+```
 _Nota importante: Si Twitterscraper devuelve una lista vacía, es necesario modificar el archivo query.py agregando este Agente de Usuario ```'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36'``` a HEADERS_LIST[]._ 
 
 ### Instalación 🔧
