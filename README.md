@@ -35,41 +35,41 @@ _Preparar un entorno de desarrollo, por ejemplo Anaconda 3 y Spyder._
 _**Etapas del proceso KDT**_
 * **Comprender el dominio de la aplicación y los objetivos del proceso KDT**
 
-_Determinar y analizar los sentimientos de un conjunto de datos recolectados de la red social Twitter._ 
+  _Determinar y analizar los sentimientos de un conjunto de datos recolectados de la red social Twitter._ 
 
-_Interpretar los resultados obtenidos por los algoritmos ejecutados en la fase de minería de datos._
+  _Interpretar los resultados obtenidos por los algoritmos ejecutados en la fase de minería de datos._
 
 * **Adquisición o selección de un conjunto de datos objetivo**
 
-_En la carpeta /data se encuentran el dataset recolectado "dataset_2_inicial", se trata de los tuits con mensajes hacia los venezolanos inmigrantes en Ecuador._
+  _En la carpeta /data se encuentran el dataset recolectado "dataset_2_inicial", se trata de los tuits con mensajes hacia los venezolanos inmigrantes en Ecuador._
 
 * **Limpieza de datos, preprocesamiento y transformación**
 
-_A través de la librería Imbalanced-learn se realizó el sobremuestreo de las clases minoritarias mediante la técnica SMOTE._
+  _A través de la librería Imbalanced-learn se realizó el sobremuestreo de las clases minoritarias mediante la técnica SMOTE._
 
-_Para la limpieza de los textos se empleó la librería RegEx, la misma que utiliza Expresiones Regulares reconocer y tratar dichos textos._
+  _Para la limpieza de los textos se empleó la librería RegEx, la misma que utiliza Expresiones Regulares reconocer y tratar dichos textos._
 
-_Se aplicó Machine Translation para el proceso de traducción de los tuits, se utilizó la librería Googletrans._
+  _Se aplicó Machine Translation para el proceso de traducción de los tuits, se utilizó la librería Googletrans._
 
 * **Desarrollo de modelos y construcción de hipótesis**
 
-_Se utilizó la librería Scikit-learn para aplicar tres algoritmos de clasificación: **Regresión Logística, Máquinas de Soporte Vectorial y Naive Bayes**. Mediante el fine-tuning de los modelos se obtuvieron modelos ajustados para mejorar las predicciones posteriores._
+  _Se utilizó la librería Scikit-learn para aplicar tres algoritmos de clasificación: **Regresión Logística, Máquinas de Soporte Vectorial y Naive Bayes**. Mediante el fine-tuning de los modelos se obtuvieron modelos ajustados para mejorar las predicciones posteriores._
 
 * **Elección y ejecución de algoritmos de minería de datos adecuados**
 
-_Se aplicó los algoritmos de clasificación ya mencionados anteriormente, lo que dio como resultado la clasificación del dataset de interés /data llamado "dataset_2_clasificado", en él se encuentran los tuits clasificados por los 3 algoritmos._
+  _Se aplicó los algoritmos de clasificación ya mencionados anteriormente, lo que dio como resultado la clasificación del dataset de interés /data llamado "dataset_2_clasificado", en él se encuentran los tuits clasificados por los 3 algoritmos._
 
-_Finalmente, se ha exportado los modelos resultantes de este último dataset, así mismo se realizó un fine-tuning de estos modelos finales. Se encuentran en la carpeta /modelos._
+  _Finalmente, se ha exportado los modelos resultantes de este último dataset, así mismo se realizó un fine-tuning de estos modelos finales. Se encuentran en la carpeta /modelos._
 
 * **Interpretación y visualización de resultados**
 
-_El algoritmo de Máquinas de Soporte Vectorial dio el mejor rendimiento con un 94% de puntuación F1, seguido de la Regresión Logística con un 93% y Naive Bayes con un 89%._
+  _El algoritmo de Máquinas de Soporte Vectorial dio el mejor rendimiento con un 94% de puntuación F1, seguido de la Regresión Logística con un 93% y Naive Bayes con un 89%._
 
-_Respecto a los sentimientos encontrados, se tiene una media de 570 tuits clasificados como xenófobos, 3088 como ofensivos y 6230 como otro sentimiento. O lo que es lo mismo, en valores porcentuales son: 5,76% xenófobos, 31,23% de lenguaje ofensivo y 63,01% de otros sentimientos._
+  _Respecto a los sentimientos encontrados, se tiene una media de 570 tuits clasificados como xenófobos, 3088 como ofensivos y 6230 como otro sentimiento. O lo que es lo mismo, en valores porcentuales son: 5,76% xenófobos, 31,23% de lenguaje ofensivo y 63,01% de otros sentimientos._
 
 ## Estudio completo 📖
 
-Puede encontrar los detalles de este proyecto en: 
+Puede encontrar los detalles de este proyecto en: [link_proyecto]()
 
 ## Autores ✒️
 
