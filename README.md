@@ -2,7 +2,7 @@
 
 _El presente Trabajo de Titulación (TT) tuvo el propósito de determinar la existencia de contenido xenófobo en un conjunto de tuits, recolectados entorno a los inmigrantes venezolanos en Ecuador, se lo llevó a cabo mediante las fases de la metodología para el Descubrimiento de Conocimiento en Texto (KDT)._
 
-## Comenzando 🚀
+## Inicio 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto y reproducirlo de manera local en tu computador._
 
@@ -30,7 +30,7 @@ Google Colab
 ```
 _Nota importante: Si Twitterscraper devuelve una lista vacía, es necesario modificar el archivo query.py agregando este Agente de Usuario ```'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36'``` a HEADERS_LIST[]._ 
 
-### Instalación 🔧
+### Desarrollo y Resultados 🔧
 
 _Preparar un entorno de desarrollo, por ejemplo Anaconda 3 y Spyder._
 
