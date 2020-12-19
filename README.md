@@ -1,9 +1,8 @@
 # Análisis de Sentimientos en Twitter para Descubrir Contenido Xenófobo hacia los Inmigrantes Venezolanos en Ecuador
 
-_El presente Trabajo de Titulación (TT) tuvo el propósito de determinar la existencia de contenido xenófobo en un conjunto de tuits, recolectados entorno a los inmigrantes venezolanos en Ecuador, se lo llevó a cabo mediante las fases de la metodología para el Descubrimiento de Conocimiento en Texto (KDT).
+_El presente Trabajo de Titulación (TT) tuvo el propósito de determinar la existencia de contenido xenófobo en un conjunto de tuits, recolectados entorno a los inmigrantes venezolanos en Ecuador, se lo llevó a cabo mediante las fases de la metodología para el Descubrimiento de Conocimiento en Texto (KDT)._
 
-Para determinar la importancia de llevar a cabo el presente estudio, se realizaron entrevistas tanto a la Ing. Celia Jara Galdeman (Gestora de la carrera de Trabajo Social) y al Dr. Paúl Palacios (Especialista en el Área de de Psicología de la Unidad de Bienestar Universitario) que desempeñan su profesión en la Universidad Nacional de Loja, dichas entrevistas están disponibles en el siguiente enlace:
-https://drive.google.com/open?id=1gNqSMraM3y-aaevO4w7Cbps1MeIJdNKW
+_Para determinar la importancia de llevar a cabo el presente estudio, se realizaron entrevistas tanto a la Ing. Celia Jara Galdeman (Gestora de la carrera de Trabajo Social) y al Dr. Paúl Palacios (Especialista en el Área de de Psicología de la Unidad de Bienestar Universitario) que desempeñan su profesión en la Universidad Nacional de Loja, dichas entrevistas están disponibles en el siguiente enlace: https://drive.google.com/open?id=1gNqSMraM3y-aaevO4w7Cbps1MeIJdNKW
 Para asegurar su disponibilidad, también se encuentran aquí: https://1drv.ms/u/s!AkrnWa5sI-tphp8lAFdQASrma-FWlg?e=RT31WY_
 
 ## Inicio 🚀
