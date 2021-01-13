@@ -17,16 +17,15 @@ _**Dataset 2** equivale al conjunto de tuits de interés recolectados entorno a 
 
 _Software utilizado para realizar el presente TT_
 
-
 _[Python 3.7](https://www.python.org/downloads/release/python-376/)_
 
-_Anaconda 3-2020.02(https://repo.anaconda.com/archive/)_
+_[Anaconda 3-2020.02](https://repo.anaconda.com/archive/)_
 
 _Spyder IDE_
 
-_Scikit-learn 0.23.2(https://scikit-learn.org/stable/install.html)_
+_Scikit-learn 0.23.2_
 
-_NLTK 3.5(https://pypi.org/project/nltk/)_
+_NLTK 3.5_
 
 _Pandas 1.0.5_
 
@@ -36,16 +35,15 @@ _Joblib 0.16.0_
 
 _Matplotlib 3.2.2_
 
-
-_Twitterscraper 1.6.1_
-
-_Imbalanced-learn 0.7.0_
-
-_Googletrans 3.0.0_
-
 _Spyder IDE_
 
-_Google Colab_
+_[Twitterscraper 1.6.1](https://pypi.org/project/twitterscraper/)_
+
+_[Imbalanced-learn 0.7.0](https://pypi.org/project/imbalanced-learn/)_
+
+_[Googletrans 3.0.0](https://pypi.org/project/googletrans/)_
+
+_[Google Colab](https://colab.research.google.com/)_
 
 _Nota importante: Si Twitterscraper devuelve una lista vacía, es necesario modificar el archivo query.py agregando este Agente de Usuario ```'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36'``` a HEADERS_LIST[]._ 
 
