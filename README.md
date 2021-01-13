@@ -35,8 +35,6 @@ _Joblib 0.16.0_
 
 _Matplotlib 3.2.2_
 
-_Spyder IDE_
-
 _[Twitterscraper 1.6.1](https://pypi.org/project/twitterscraper/)_
 
 _[Imbalanced-learn 0.7.0](https://pypi.org/project/imbalanced-learn/)_
