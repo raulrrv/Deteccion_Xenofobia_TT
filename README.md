@@ -17,7 +17,7 @@ _**Dataset 2** equivale al conjunto de tuits de interés recolectados entorno a 
 
 _Software utilizado para realizar el presente TT_
 
-```
+
 [Python 3.7](https://www.python.org/downloads/release/python-376/)
 Scikit-learn 0.23.2
 NLTK 3.5
@@ -30,7 +30,7 @@ Matplotlib 3.2.2
 Googletrans 3.0.0
 Spyder IDE
 Google Colab
-```
+
 _Nota importante: Si Twitterscraper devuelve una lista vacía, es necesario modificar el archivo query.py agregando este Agente de Usuario ```'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36'``` a HEADERS_LIST[]._ 
 
 ### Desarrollo y Resultados 🔧
