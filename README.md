@@ -18,7 +18,7 @@ _**Dataset 2** equivale al conjunto de tuits de interés recolectados entorno a 
 _Software utilizado para realizar el presente TT_
 
 ```
-Python 3.7
+[Python 3.7](https://www.python.org/downloads/release/python-376/)
 Scikit-learn 0.23.2
 NLTK 3.5
 Twitterscraper 1.6.1
