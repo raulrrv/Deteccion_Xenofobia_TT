@@ -9,6 +9,8 @@ Para asegurar su disponibilidad, también se encuentran aquí: https://1drv.ms/u
 
 _Estas instrucciones te permitirán obtener una copia del proyecto y reproducirlo de manera local en tu computador._
 
+_Están disponibles un lista de videos en donde se explica la correcta utilización de los recursos de este repositorio para garantizar la reproducibilidad de este trabajo. Visitar https://www.youtube.com/playlist?list=PLiM6EEUFTvE0r5pbn13MNRML_sgFajscs_
+
 _**Dataset 1** equivale al conjunto de tuits clasificados por crowdsourcing, obtenido del repositorio de [T-Davidson](https://github.com/t-davidson/hate-speech-and-offensive-language/blob/master/data/labeled_data.csv)._
 
 _**Dataset 2** equivale al conjunto de tuits de interés recolectados entorno a los inmigrantes venezolanos en Ecuador._
