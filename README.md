@@ -41,7 +41,7 @@ _[Twitterscraper 1.6.1](https://pypi.org/project/twitterscraper/)_
 
 _[Imbalanced-learn 0.7.0](https://pypi.org/project/imbalanced-learn/)_
 
-_[Googletrans 3.0.0](https://pypi.org/project/googletrans/)_
+_[Googletrans 3.0.0](https://pypi.org/project/googletrans/) (Utilizar actualización [PyGoogleTranslation](https://pypi.org/project/pygoogletranslation/))_
 
 _[Google Colab](https://colab.research.google.com/)_
 
