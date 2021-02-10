@@ -20,11 +20,20 @@ from sklearn import linear_model
 import seaborn as sns #crear gráficas
 from matplotlib import pyplot as plt
 from scipy.sparse import csr_matrix
+from sklearn.naive_bayes import MultinomialNB
+naive_bayes = MultinomialNB()
+from sklearn.ensemble import RandomForestClassifier
+RandomForest = RandomForestClassifier()
 
 stopwords = nltk.corpus.stopwords.words("english")
-#importar dataset sin clasificar, sin vectorizar
-def importarDS(nombre):
-    df = pd.read_excel("C:/Users/unknown/OneDrive/UNL/X/Trabajo de Titulacion/Trabajo_Titulacion/data/Nuevos/"+nombre)
+#importar dataset clasificado, sin vectorizar - excel
+def importarDSExcel(nombre):
+    df = pd.read_excel("E:/Tutoriales_TT/3 Limpieza/"+nombre)
+    return df
+
+#importar dataset clasificado, sin vectorizar - csv
+def importarDScsv(nombre):
+    df = pd.read_csv("E:/Tutoriales_TT/3 Limpieza/"+nombre)
     return df
 
 #importar dataset vectorizado 
@@ -65,6 +74,7 @@ def importarModelo(algoritmo, nombre):
 #Como dice, % s (de cadena) es para reemplazar una cadena, % f (de flotante) es para reemplazar un flotante, y % d (de entero) es para reemplazar un entero
 #grafica 2 matriz confusion
 def graficar_matConfusion(y_, predicciones_, titulo):
+    #labels = ['Discursos odio', 'Ofensivo', 'Ninguno']
     labels = ['Xenófobo', 'Ofensivo', 'Otro']
     matriz_confusion = confusion_matrix(y_, predicciones_) #crea matriz de confusion
     clases = ["%s"%i for i in labels[0:len(np.unique(predicciones_))]] 
@@ -74,6 +84,7 @@ def graficar_matConfusion(y_, predicciones_, titulo):
     plt.title(titulo)
     plt.show()
     
+print(len(np.unique(predictions)))  
 def importarVectorTFIDF(nombre):
     vector_tfidf_ = joblib.load("C:/Users/unknown/OneDrive/UNL/X/Trabajo de Titulacion/Trabajo_Titulacion/modelo/"+nombre)
     return vector_tfidf_
@@ -108,7 +119,7 @@ def crearModelo_SVM(X_, y_):
     return modelo
 
 def exportarModelo(modelo_, algoritmo, nombre):
-    joblib.dump(modelo_, "C:/Users/unknown/OneDrive/UNL/X/Trabajo de Titulacion/Trabajo_Titulacion/modelo/"+algoritmo+"/"+nombre)
+    joblib.dump(modelo_, "E:/Tutoriales_TT/6 Modelos/"+algoritmo+"/"+nombre)
     print(str(modelo_)+" exportado")
     
 #calcular metricas de precisión con validacion cruzada
@@ -184,10 +195,16 @@ def graficarDivisionDS(train, test, titulo):
     plt.title(titulo) 
     plt.legend(labels=slices)  #valores flotantes
 
-from mlxtend.plotting import plot_decision_regions
-def graficarLimitesMatConf():
-    pass
+def crearModelo_NB(X_, y_):
+    modelo = naive_bayes.fit(X_, y_)
+    print("Modelo creado: "+str(modelo))
+    return modelo
 
+def crearModelo_RForest(X_, y_):
+    modelo_ranForest = RandomForest.fit(X_, y_)
+    print("Modelo creado: "+str(modelo_ranForest))
+    return modelo_ranForest
+###########################################################
 
 support_vectors = modelo_svm.support_vectors_
 
@@ -211,8 +228,6 @@ plot_decision_regions(X_test_, y_test_, clf=modelo_svm,
                   filler_feature_ranges={0: width, 7665: width},
                   legend=2)
 plt.show()
-
-    
 X_sm, y_sm = importarDSVector("SVM", "data_labeled_smote")
 y_sm
 modelo = crearModelo_SVM(X_train, y_train)
@@ -220,16 +235,72 @@ exportarModelo(modelo, "SVM", "modelo_labeled_smote_train_svm.pkl")
 
 print(tweets)
 exportarTFIDF(vector_tfidf_fit, "xeno_data_clean_tfidf_.pkl")
-df = importarDS("tweets_results_orig_trad_clasif_rl.xlsx")
+
+##########################################################################
+########__________VECTORIZACIÓN______###########
+df = importarDScsv("labeled_data_clean2.csv")
+
+
+print(stopwords)
 df.columns
-tweets = df.text_traducido
-print(tweets)
-tweets_origin = df.text_original
-y_reglog = df.clase_RegLog
+df.head()
+df.clase.hist()
+
+tweets = df.text
 vector_tfidf_fit = fitTFIDF(tweets)
 X = transformTFIDF(vector_tfidf_fit, tweets)
 
+y=df.clase
+print(y)
+
+######_______________SMOTE__________#############
+
+X_sm, y_sm = aplicarSMOTE(X, y)
+y_sm.hist()
+
+
+#####_____CREACIÓN DE MODELO SVM_____#####
 X_train, X_test, y_train, y_test = dividirDatos(X_sm, y_sm)
+modelo_svm = crearModelo_SVM(X_train, y_train)
+predictions = predicciones(X_test, modelo_svm)
+
+exportarModelo(modelo_svm, "SVM", "modelo_labeled_smote_train_svm.pkl")
+
+
+#####_____CREACIÓN DE MODELO RandomForest_____#####
+X_train, X_test, y_train, y_test = dividirDatos(X, y)
+modelo_RanForest = crearModelo_RForest(X_train, y_train)
+
+predictions = predicciones(X_test, modelo_RanForest)
+print(predictions)
+reporteClasificacion(y_test, predictions)
+
+#####_____CREACIÓN DE MODELO NAVIE BAYES_____#####
+
+modelo_navi = crearModelo_NB(X_train, y_train)
+
+exportarModelo(modelo_navi, "RegLog_NaiveBayes", "modelo_labeled_smote_train_navi.pkl")
+
+predictions = predicciones(X_test, modelo_navi)
+print(predictions)
+reporteClasificacion(y_test, predictions)
+
+graficar_matConfusion(y_test, predictions, 'Matriz de confusión del modelo de entrenamiento de \nNavie Bayes con el conjunto de test')
+
+#####__CREACIÓN DE MODELO REGRESION LOGÍSTICA_____#####
+
+modelo_reglog = linear_model.LogisticRegression(solver='lbfgs', max_iter = 400).fit(X_train,y_train) 
+
+exportarModelo(modelo_reglog, "RegLog_NaiveBayes", "modelo_labeled_smote_train_reglog.pkl")
+
+predictions = predicciones(X_test, modelo_reglog)
+print(predictions)
+reporteClasificacion(y_test, predictions)
+
+graficar_matConfusion(y_test, predictions, 'Matriz de confusión del modelo de entrenamiento de \nRandom Forest con el conjunto de test')
+
+
+
 exportarDSVectorSM(X_train, y_train, "SVM", "xeno_labeled_smote_train_svm")
 
 exportarDSVector(X_train, y_train, "SVM", "data_labeled_smote_train")
