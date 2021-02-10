@@ -88,7 +88,7 @@ _**Etapas del proceso KDT**_
 
 ## Estudio completo 📖
 
-Puede encontrar los detalles de este proyecto en: [https://dspace.unl.edu.ec/jspui/handle/123456789/23796](dspace UNL)
+_Puede encontrar los detalles de este proyecto en: [https://dspace.unl.edu.ec/jspui/handle/123456789/23796](dspace UNL)_
 
 ## Autores ✒️
 
